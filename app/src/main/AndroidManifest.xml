@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tahadroid.deliverbuddy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".login.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login.BaseActivity">
+
+        </activity>
+        <activity android:name=".login.SignInActivity" />
+        <activity android:name=".views.profile.ProfileActivity" />
+        <activity android:name=".views.wallet.WalletActivity" />
+        <activity android:name=".views.order.OrdarDetailsActivity" />
+        <activity android:name=".views.order.OrderActivity"></activity>
+        <activity android:name=".views.gps.GpsActivity" />
+        <activity android:name=".views.discover.DiscoverActivity" />
+        <activity
+            android:name=".views.MenuActivity"
+            android:label="@string/title_activity_menu" />
+        <activity android:name=".views.product.ProductsActivity" />
+        <activity android:name=".views.home.HomeActivity" />
+        <activity android:name=".login.RegisterActivity" />
+    </application>
+
+</manifest>

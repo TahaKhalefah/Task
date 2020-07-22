@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "516801362816",
+    "firebase_url": "https://delivery-buddy-bca11.firebaseio.com",
+    "project_id": "delivery-buddy-bca11",
+    "storage_bucket": "delivery-buddy-bca11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:516801362816:android:b6573b0e8125394ec45f65",
+        "android_client_info": {
+          "package_name": "com.tahadroid.deliverbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "516801362816-003q1ohj68j5coqq68k3q4mlpbuco1gu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tahadroid.deliverbuddy",
+            "certificate_hash": "5b48d1a5f887343f94c741a0023775c2dfbd4382"
+          }
+        },
+        {
+          "client_id": "516801362816-oho5t3n0a2q82v01uua3ci7isvm9fhm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ8Zto1-9Yafg1qRhbeq9bftZg-T_rLMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "516801362816-oho5t3n0a2q82v01uua3ci7isvm9fhm9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
