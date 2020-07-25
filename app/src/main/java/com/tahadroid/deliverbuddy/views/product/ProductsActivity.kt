@@ -25,10 +25,10 @@ class ProductsActivity : AppCompatActivity() {
     }
 
     private fun setRecyclerView() {
-        productTabAdapter = ProductTabAdapter { view, myTab, i ->
+        productTabAdapter = ProductTabAdapter { _, _, _ ->
             startActivity(Intent(this@ProductsActivity, DiscoverActivity::class.java))
         }
-        productAdapter = ProductAdapter { view, product, i ->
+        productAdapter = ProductAdapter { _, _, _ ->
         }
         val list = ArrayList<MyTab>()
         for (i in 0..10) {

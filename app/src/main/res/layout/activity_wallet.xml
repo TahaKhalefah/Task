@@ -1,215 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lighGray2"
+    android:fillViewport="true"
     tools:context=".views.wallet.WalletActivity">
 
-    <View
-        android:id="@+id/view16"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:background="@color/lighBlue"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:background="@color/lighGray2">
 
-    <TextView
-        android:id="@+id/textView40"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="@string/wallet_balance"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/view16"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@color/lighBlue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/view18"
-        android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/background_gps"
-        app:layout_constraintBottom_toBottomOf="@+id/view16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view16" />
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/wallet_balance"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView41"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/_128_48"
-        android:textColor="@color/white"
-        android:textSize="64sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        <View
+            android:id="@+id/view18"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/background_gps"
+            app:layout_constraintBottom_toBottomOf="@+id/view16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/_0_02125231_btc"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView41"
-        app:layout_constraintStart_toStartOf="@+id/textView41"
-        app:layout_constraintTop_toBottomOf="@+id/textView41" />
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/_128_48"
+            android:textColor="@color/white"
+            android:textSize="64sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView40" />
 
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toStartOf="@+id/view20"
-        app:layout_constraintStart_toStartOf="@+id/view18"
-        app:layout_constraintTop_toTopOf="@+id/view18"
-        app:srcCompat="@drawable/ic_supervisor" />
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/_0_02125231_btc"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView41"
+            app:layout_constraintStart_toStartOf="@+id/textView41"
+            app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
-    <View
-        android:id="@+id/view20"
-        android:layout_width="1dp"
-        android:layout_height="50dp"
-        android:background="@color/lighBlue"
-        app:layout_constraintEnd_toEndOf="@+id/view18"
-        app:layout_constraintStart_toStartOf="@+id/view18"
-        app:layout_constraintTop_toTopOf="@+id/imageView19" />
+        <ImageView
+            android:id="@+id/imageView19"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toStartOf="@+id/view20"
+            app:layout_constraintStart_toStartOf="@+id/view18"
+            app:layout_constraintTop_toTopOf="@+id/view18"
+            app:srcCompat="@drawable/ic_supervisor" />
 
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        app:layout_constraintEnd_toEndOf="@+id/view18"
-        app:layout_constraintStart_toEndOf="@+id/view20"
-        app:layout_constraintTop_toTopOf="@+id/view20"
-        app:srcCompat="@drawable/ic_supervisor" />
+        <View
+            android:id="@+id/view20"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="@color/lighBlue"
+            app:layout_constraintEnd_toEndOf="@+id/view18"
+            app:layout_constraintStart_toStartOf="@+id/view18"
+            app:layout_constraintTop_toTopOf="@+id/imageView19" />
 
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/send_money"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView19"
-        app:layout_constraintStart_toStartOf="@+id/imageView19"
-        app:layout_constraintTop_toBottomOf="@+id/imageView19" />
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="@+id/view18"
+            app:layout_constraintStart_toEndOf="@+id/view20"
+            app:layout_constraintTop_toTopOf="@+id/view20"
+            app:srcCompat="@drawable/ic_supervisor" />
 
-    <TextView
-        android:id="@+id/textView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to_bank"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView43"
-        app:layout_constraintStart_toStartOf="@+id/textView43"
-        app:layout_constraintTop_toBottomOf="@+id/view16" />
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send_money"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view16"
+            app:layout_constraintEnd_toEndOf="@+id/imageView19"
+            app:layout_constraintStart_toStartOf="@+id/imageView19"
+            app:layout_constraintTop_toBottomOf="@+id/imageView19" />
 
-    <TextView
-        android:id="@+id/textView45"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/requist_money"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView20"
-        app:layout_constraintStart_toStartOf="@+id/imageView20"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_bank"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView43"
+            app:layout_constraintStart_toStartOf="@+id/textView43"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
 
-    <TextView
-        android:id="@+id/textView46"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/to_friends"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView45"
-        app:layout_constraintStart_toStartOf="@+id/textView45"
-        app:layout_constraintTop_toBottomOf="@+id/view16" />
+        <TextView
+            android:id="@+id/textView45"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/requist_money"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view16"
+            app:layout_constraintEnd_toEndOf="@+id/imageView20"
+            app:layout_constraintStart_toStartOf="@+id/imageView20"
+            app:layout_constraintTop_toBottomOf="@+id/imageView20" />
 
-    <View
-        android:id="@+id/view21"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="@color/lighBlue"
-        app:layout_constraintEnd_toEndOf="@id/textView45"
-        app:layout_constraintBottom_toBottomOf="@id/view18"
-        app:layout_constraintStart_toStartOf="@+id/textView43"
-        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_friends"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView45"
+            app:layout_constraintStart_toStartOf="@+id/textView45"
+            app:layout_constraintTop_toBottomOf="@+id/view16" />
 
-    <TextView
-        android:id="@+id/textView47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_money"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view21"
-        app:layout_constraintEnd_toEndOf="@+id/view21"
-        app:layout_constraintStart_toStartOf="@+id/view21"
-        app:layout_constraintTop_toTopOf="@+id/view21" />
+        <View
+            android:id="@+id/view21"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/lighBlue"
+            app:layout_constraintBottom_toBottomOf="@id/view18"
+            app:layout_constraintEnd_toEndOf="@id/textView45"
+            app:layout_constraintStart_toStartOf="@+id/textView43"
+            app:layout_constraintTop_toBottomOf="@+id/textView44" />
 
-    <View
-        android:id="@+id/view23"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:background="@color/lighBlue"
-        app:layout_constraintStart_toStartOf="@+id/view18"
-        app:layout_constraintTop_toBottomOf="@id/view18" />
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_money"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/view21"
+            app:layout_constraintEnd_toEndOf="@+id/view21"
+            app:layout_constraintStart_toStartOf="@+id/view21"
+            app:layout_constraintTop_toTopOf="@+id/view21" />
 
-    <TextView
-        android:id="@+id/textView48"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/next_transfer_stars_from"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/view23"
-        app:layout_constraintTop_toTopOf="@+id/view23" />
+        <View
+            android:id="@+id/view23"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/lighBlue"
+            app:layout_constraintStart_toStartOf="@+id/view18"
+            app:layout_constraintTop_toBottomOf="@id/view18" />
 
-    <TextView
-        android:id="@+id/textView49"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/_10_january_2018"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view23"
-        app:layout_constraintStart_toStartOf="@+id/textView48"
-        app:layout_constraintTop_toBottomOf="@+id/textView48" />
+        <TextView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/next_transfer_stars_from"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/view23"
+            app:layout_constraintTop_toTopOf="@+id/view23" />
 
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view23"
-        app:layout_constraintEnd_toEndOf="@+id/view23"
-        app:layout_constraintStart_toStartOf="@+id/view23"
-        app:layout_constraintTop_toTopOf="@+id/view23"
-        app:srcCompat="@android:drawable/stat_sys_headset" />
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@color/lighGray"
-        app:layout_constraintTop_toBottomOf="@id/textView49"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+        <TextView
+            android:id="@+id/textView49"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/_10_january_2018"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view23"
+            app:layout_constraintStart_toStartOf="@+id/textView48"
+            app:layout_constraintTop_toBottomOf="@+id/textView48" />
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view23"
+            app:layout_constraintEnd_toEndOf="@+id/view23"
+            app:layout_constraintStart_toStartOf="@+id/view23"
+            app:layout_constraintTop_toTopOf="@+id/view23"
+            app:srcCompat="@android:drawable/stat_sys_headset" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/lighGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView49" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

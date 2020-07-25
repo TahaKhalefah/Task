@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.tahadroid.deliverbuddy.R
@@ -24,7 +25,11 @@ class RegisterActivity : BaseActivity() {
                 registerUser()
             }
         }
+        GoToSignIn.setOnClickListener {
 
+            val intent = Intent(this@RegisterActivity, SignInActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun isValidForm(): Boolean {
@@ -44,7 +49,7 @@ class RegisterActivity : BaseActivity() {
     }
 
     private fun registerUser() {
-       showDialog(this)
+showDialog(this)
         val email = registerEmailEditText.text.toString()
         val password = registerPasswordEditText.text.toString()
         auth.createUserWithEmailAndPassword(email, password)

@@ -16,7 +16,7 @@ class PersonalFragment : Fragment(R.layout.fragment_personal) {
     }
 
     private fun setupRecyclerView() {
-        personalAdapter = PersonalAdapter { view, myTab, i ->
+        personalAdapter = PersonalAdapter { _, _, _ ->
         }
         val list = ArrayList<Personal>()
         for (i in 0..10) {

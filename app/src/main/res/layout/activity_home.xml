@@ -1,142 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:fitsSystemWindows="true"
-    android:background="@drawable/background"
     tools:context=".views.home.HomeActivity">
-    <com.google.android.material.appbar.AppBarLayout
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp100"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        >
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/dp100"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginStart="@dimen/title_padding">
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/customToolbar"
-                android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                app:layout_collapseMode="pin"
-                android:layout_height="?actionBarSize">
-                <TextView
-                    android:layout_width="@dimen/menu_text"
-                    android:layout_height="wrap_content"
-                    android:text="@string/admin"
-                    android:textStyle="bold"
-                    android:drawablePadding="@dimen/dp5"
-                    android:drawableTint="@android:color/black"
-                    android:textColor="@android:color/black"
-                    android:drawableRight="@drawable/ic_person"
-                    android:background="@drawable/toolbar_text_shape"
-                    android:gravity="center"
-                    android:padding="@dimen/dp8"
-                    />
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleMarginStart="@dimen/title_padding">
 
-    </com.google.android.material.appbar.AppBarLayout>
-    <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/customToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:layout_collapseMode="pin">
 
-    <com.skyfishjy.library.RippleBackground
-        android:id="@+id/content"
-        android:layout_width="@dimen/dp170"
-        android:layout_height="@dimen/dp170"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rb_color="#0099CC"
-        app:rb_duration="3000"
-        app:rb_radius="@dimen/dp32"
-        app:rb_rippleAmount="5"
-        app:rb_scale="3">
+                    <TextView
+                        android:layout_width="@dimen/menu_text"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toolbar_text_shape"
+                        android:drawableRight="@drawable/ic_person"
+                        android:drawablePadding="@dimen/dp5"
+                        android:drawableTint="@android:color/black"
+                        android:gravity="center"
+                        android:padding="@dimen/dp8"
+                        android:text="@string/admin"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/logo_image"
-            android:layout_width="@dimen/dp76"
-            android:layout_height="@dimen/dp76"
-            android:layout_centerInParent="true"
-            android:src="@drawable/logo"
-            app:civ_border_color="#0099CC"
-            app:civ_border_width="@dimen/dp2" />
-    </com.skyfishjy.library.RippleBackground>
+        </com.google.android.material.appbar.AppBarLayout>
 
-    <include
-        android:id="@+id/include1"
-        layout="@layout/circle_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/include4"
-        app:layout_constraintStart_toEndOf="@+id/content"
-        app:layout_constraintTop_toBottomOf="@+id/content" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/include2"
-        layout="@layout/circle_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp64"
-        android:visibility="gone"
-        app:layout_constraintEnd_toStartOf="@+id/content"
-        app:layout_constraintStart_toEndOf="@+id/include3"
-        app:layout_constraintTop_toBottomOf="@+id/content" />
+            <com.skyfishjy.library.RippleBackground
+                android:id="@+id/content"
+                android:layout_width="@dimen/dp170"
+                android:layout_height="@dimen/dp170"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rb_color="#0099CC"
+                app:rb_duration="3000"
+                app:rb_radius="@dimen/dp32"
+                app:rb_rippleAmount="5"
+                app:rb_scale="3">
 
-    <include
-        android:id="@+id/include3"
-        layout="@layout/circle_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/content"
-        app:layout_constraintEnd_toStartOf="@+id/content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/content" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/logo_image"
+                    android:layout_width="@dimen/dp76"
+                    android:layout_height="@dimen/dp76"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo"
+                    app:civ_border_color="#0099CC"
+                    app:civ_border_width="@dimen/dp2" />
+            </com.skyfishjy.library.RippleBackground>
 
-    <include
-        android:id="@+id/include4"
-        layout="@layout/circle_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/content"
-        app:layout_constraintTop_toTopOf="@+id/content" />
+            <include
+                android:id="@+id/include1"
+                layout="@layout/circle_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="64dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/include4"
+                app:layout_constraintStart_toEndOf="@+id/content"
+                app:layout_constraintTop_toBottomOf="@+id/content" />
 
-    <include
-        android:id="@+id/include5"
-        layout="@layout/circle_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:layout_marginStart="@dimen/dp64"
-        app:layout_constraintBottom_toTopOf="@+id/content"
-        app:layout_constraintEnd_toStartOf="@+id/content"
-        app:layout_constraintStart_toEndOf="@+id/include3" />
+            <include
+                android:id="@+id/include2"
+                layout="@layout/circle_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp64"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/content"
+                app:layout_constraintStart_toEndOf="@+id/include3"
+                app:layout_constraintTop_toBottomOf="@+id/content" />
 
-    <include
-        android:id="@+id/include6"
-        layout="@layout/circle_item"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp64"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/include5"
-        app:layout_constraintEnd_toStartOf="@+id/include4"
-        app:layout_constraintStart_toEndOf="@+id/content"
-        app:layout_constraintTop_toTopOf="@+id/include5" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <include
+                android:id="@+id/include3"
+                layout="@layout/circle_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/content"
+                app:layout_constraintEnd_toStartOf="@+id/content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/content" />
+
+            <include
+                android:id="@+id/include4"
+                layout="@layout/circle_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/content"
+                app:layout_constraintTop_toTopOf="@+id/content" />
+
+            <include
+                android:id="@+id/include5"
+                layout="@layout/circle_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp64"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/content"
+                app:layout_constraintEnd_toStartOf="@+id/content"
+                app:layout_constraintStart_toEndOf="@+id/include3" />
+
+            <include
+                android:id="@+id/include6"
+                layout="@layout/circle_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp64"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/include5"
+                app:layout_constraintEnd_toStartOf="@+id/include4"
+                app:layout_constraintStart_toEndOf="@+id/content"
+                app:layout_constraintTop_toTopOf="@+id/include5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.core.widget.NestedScrollView>

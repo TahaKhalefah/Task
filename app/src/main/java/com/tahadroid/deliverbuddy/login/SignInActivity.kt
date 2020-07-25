@@ -13,7 +13,7 @@ import com.tahadroid.deliverbuddy.views.home.HomeActivity
 
 import kotlinx.android.synthetic.main.activity_sign_in.*
 
-class SignInActivity : BaseActivity() {
+class SignInActivity :BaseActivity() {
 
     private lateinit var auth: FirebaseAuth
     private val TAG = "RegisterActivity"

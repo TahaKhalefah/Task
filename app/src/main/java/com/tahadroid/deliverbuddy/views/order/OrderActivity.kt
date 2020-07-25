@@ -16,7 +16,7 @@ class OrderActivity : AppCompatActivity() {
     }
 
     private fun setRecyclerView() {
-        orderAdapter = OrderAdapter { view, myTab, i ->
+        orderAdapter = OrderAdapter { _, _, _->
             startActivity(Intent(this@OrderActivity, OrdarDetailsActivity::class.java))
         }
 

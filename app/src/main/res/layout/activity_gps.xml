@@ -1,103 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".views.gps.GpsActivity">
 
-    <ImageView
-        android:id="@+id/imageView17"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/gps" />
+        android:layout_height="match_parent">
 
-    <View
-        android:id="@+id/view10"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp300"
-        android:layout_marginStart="@dimen/dp24"
-        android:layout_marginEnd="@dimen/dp24"
-        android:layout_marginBottom="@dimen/dp16"
-        android:background="@drawable/background_gps"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gps" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/logo_image"
-        android:layout_width="@dimen/dp200"
-        android:layout_height="@dimen/dp200"
-        android:layout_centerInParent="true"
-        android:src="@drawable/tr"
-        app:civ_border_color="#0099CC"
-        app:civ_border_width="@dimen/dp2"
-        app:layout_constraintBottom_toTopOf="@+id/view10"
-        app:layout_constraintEnd_toEndOf="@+id/view10"
-        app:layout_constraintStart_toStartOf="@+id/view10"
-        app:layout_constraintTop_toTopOf="@+id/view10" />
+        <View
+            android:id="@+id/view10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp300"
+            android:layout_marginStart="@dimen/dp24"
+            android:layout_marginEnd="@dimen/dp24"
+            android:layout_marginBottom="@dimen/dp16"
+            android:background="@drawable/background_gps"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp8"
-        android:text="@string/on_his_way"
-        android:textColor="@color/black"
-        android:textSize="@dimen/sp24"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/logo_image"
-        app:layout_constraintStart_toStartOf="@+id/logo_image"
-        app:layout_constraintTop_toBottomOf="@+id/logo_image" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logo_image"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="@dimen/dp200"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tr"
+            app:civ_border_color="#0099CC"
+            app:civ_border_width="@dimen/dp2"
+            app:layout_constraintBottom_toTopOf="@+id/view10"
+            app:layout_constraintEnd_toEndOf="@+id/view10"
+            app:layout_constraintStart_toStartOf="@+id/view10"
+            app:layout_constraintTop_toTopOf="@+id/view10" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp8"
-        android:text="@string/_10_15_minutes"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@+id/textView20"
-        app:layout_constraintStart_toStartOf="@+id/textView20"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/on_his_way"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp24"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/logo_image"
+            app:layout_constraintStart_toStartOf="@+id/logo_image"
+            app:layout_constraintTop_toBottomOf="@+id/logo_image" />
 
-    <View
-        android:id="@+id/view11"
-        android:layout_width="@dimen/dp50"
-        android:layout_height="@dimen/dp50"
-        android:background="@drawable/background_gps_left"
-        app:layout_constraintBottom_toBottomOf="@+id/view10"
-        app:layout_constraintEnd_toEndOf="@+id/view10" />
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="@string/_10_15_minutes"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/view11"
-        app:layout_constraintEnd_toEndOf="@+id/view11"
-        app:layout_constraintStart_toStartOf="@+id/view11"
-        app:layout_constraintTop_toTopOf="@+id/view11"
-        app:srcCompat="@android:drawable/stat_sys_vp_phone_call" />
+        <View
+            android:id="@+id/view11"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/background_gps_left"
+            app:layout_constraintBottom_toBottomOf="@+id/view10"
+            app:layout_constraintEnd_toEndOf="@+id/view10" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/view11"
+            app:layout_constraintEnd_toEndOf="@+id/view11"
+            app:layout_constraintStart_toStartOf="@+id/view11"
+            app:layout_constraintTop_toTopOf="@+id/view11"
+            app:srcCompat="@android:drawable/stat_sys_vp_phone_call" />
 
 
-    <View
-        android:id="@+id/view12"
-        android:layout_width="@dimen/dp50"
-        android:layout_height="@dimen/dp50"
-        android:background="@drawable/background_gps_right"
-        app:layout_constraintBottom_toBottomOf="@+id/view10"
-        app:layout_constraintStart_toStartOf="@+id/view10" />
+        <View
+            android:id="@+id/view12"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:background="@drawable/background_gps_right"
+            app:layout_constraintBottom_toBottomOf="@+id/view10"
+            app:layout_constraintStart_toStartOf="@+id/view10" />
 
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/view12"
-        app:layout_constraintEnd_toEndOf="@+id/view12"
-        app:layout_constraintStart_toStartOf="@+id/view12"
-        app:layout_constraintTop_toTopOf="@+id/view12"
-        app:srcCompat="@android:drawable/stat_sys_vp_phone_call_on_hold" />
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/view12"
+            app:layout_constraintEnd_toEndOf="@+id/view12"
+            app:layout_constraintStart_toStartOf="@+id/view12"
+            app:layout_constraintTop_toTopOf="@+id/view12"
+            app:srcCompat="@android:drawable/stat_sys_vp_phone_call_on_hold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,72 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
-    android:fitsSystemWindows="true"
+    android:fillViewport="true"
     tools:context=".views.product.ProductsActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:fitsSystemWindows="true">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
             android:fitsSystemWindows="true"
-            app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginStart="@dimen/title_padding">
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/customToolbar"
+            <com.google.android.material.appbar.CollapsingToolbarLayout
                 android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"
-                android:theme="@style/ThemeOverlay.AppCompat.Light"
-                app:layout_collapseMode="pin">
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleMarginStart="@dimen/title_padding">
 
-                <TextView
-                    android:layout_width="@dimen/menu_text"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/toolbar_text_shape"
-                    android:drawableRight="@drawable/ic_person"
-                    android:drawablePadding="5dp"
-                    android:drawableTint="@android:color/black"
-                    android:gravity="center"
-                    android:padding="8dp"
-                    android:text="@string/admin"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
-            </androidx.appcompat.widget.Toolbar>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/customToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Light"
+                    app:layout_collapseMode="pin">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical">
+                    <TextView
+                        android:layout_width="@dimen/menu_text"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/toolbar_text_shape"
+                        android:drawableRight="@drawable/ic_person"
+                        android:drawablePadding="5dp"
+                        android:drawableTint="@android:color/black"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/admin"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/tab_rv"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/layout_tab_item" />
+            android:layout_marginTop="100dp"
+            android:orientation="vertical">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/stag_rv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="30dp"
-            app:spanCount="2"
-            tools:listitem="@layout/layout_product_item"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-             />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/tab_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/layout_tab_item" />
 
-    </LinearLayout>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/stag_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="2"
+                tools:listitem="@layout/layout_product_item" />
+
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.core.widget.NestedScrollView>

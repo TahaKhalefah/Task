@@ -20,7 +20,7 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
 
     private fun setRecyclerView() {
 
-        foodAdapter = FoodAdapter { view, product, i ->
+        foodAdapter = FoodAdapter { _, _, _ ->
         }
         val list2 = ArrayList<Food>()
 
@@ -46,7 +46,8 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
         foodAdapter.swapData(list2)
         food_stage_rv.adapter = foodAdapter
 
-        foodTabAdapter = FoodTabAdapter { view, myTab, i ->
+        foodTabAdapter = FoodTabAdapter {
+            view, myTab, i ->
         }
         val list = ArrayList<MyTab>()
         for (i in 0..10) {
